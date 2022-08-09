@@ -41,7 +41,7 @@ use_jit = False if use_torch2trt else torch.cuda.device_count() <= 1
 ScriptModuleWrapper = torch.jit.ScriptModule if use_jit else nn.Module
 script_method_wrapper = torch.jit.script_method if use_jit else lambda fn, _rcn=None: fn
 
-
+prnit('.')
 class Concat(nn.Module):
     def __init__(self, nets, extra_params):
         super().__init__()
